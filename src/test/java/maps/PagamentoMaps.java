@@ -6,23 +6,25 @@ import org.openqa.selenium.WebElement;
 public class PagamentoMaps {
 
     @AndroidFindBy(accessibility = "imagemCartao_credito")
-    public WebElement btnCartaoCredito;
+    protected WebElement btnCartaoCredito;
 
     @AndroidFindBy(accessibility = "inputCredicard")
-    public WebElement inpCreditCard;
+    protected WebElement inpCreditCard;
     @AndroidFindBy(accessibility = "inputdata")
-    public WebElement inpData;
+    protected WebElement inpData;
 
     @AndroidFindBy(accessibility = "inputCVV")
-    public WebElement inpCVV;
+    protected WebElement inpCVV;
 
     @AndroidFindBy(accessibility = "inputNomeTitular")
-    public WebElement inpNomeTitular;
+    protected WebElement inpNomeTitular;
 
     @AndroidFindBy(accessibility = "inputCPFTitular")
-    public WebElement inpCpfTitular;
+    protected WebElement inpCpfTitular;
 
     @AndroidFindBy(accessibility = "confirmar_pagamento_botao")
-    public WebElement btnConfirmarPagamento;
+    protected WebElement btnConfirmarPagamento;
 
+    @AndroidFindBy(accessibility = "pagamentoRealizado")
+    protected WebElement txtMsgPagamento;
 }
