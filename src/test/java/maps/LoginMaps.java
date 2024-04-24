@@ -17,10 +17,17 @@ public class LoginMaps {
     @AndroidFindBy (accessibility = "emailError")
     protected WebElement txtEmailError;
 
+    @AndroidFindBy(accessibility = "authErrorEmail")
+    protected WebElement txtAuthErrorEmail;
+
     @AndroidFindBy (accessibility = "passwordError")
     protected WebElement txtPasswordError;
 
+    @AndroidFindBy(accessibility = "authErrorPassword")
+    protected WebElement txtAuthErrorPassword;
+
     @AndroidFindBy (accessibility = "naoTemConta_text")
     protected WebElement linkNatoTemConta;
+
 
 }

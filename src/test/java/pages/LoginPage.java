@@ -21,11 +21,21 @@ public class LoginPage extends LoginMaps {
     }
 
     public String getTxtEmailError(){
-        return txtEmailError.getText();
+
+        try {
+            return txtEmailError.getText();
+        }catch (Exception e){
+            return txtAuthErrorEmail.getText();
+        }
+
     }
 
     public String getTxtPasswordError(){
-        return txtPasswordError.getText();
+        try {
+            return txtPasswordError.getText();
+        }catch (Exception e){
+            return txtAuthErrorPassword.getText();
+        }
     }
 
 
