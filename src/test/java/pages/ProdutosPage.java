@@ -13,9 +13,11 @@ public class ProdutosPage  extends ProdutosMaps {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver()), this);
     }
 
-
-
     public String getTxtTituloProdutos(){
         return txtTituloProdutos.getText();
+    }
+
+    public void clickPacoteCurso(){
+        btnPacoteCursos.click();
     }
 }

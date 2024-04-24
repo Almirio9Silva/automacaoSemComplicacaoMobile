@@ -1,7 +1,11 @@
 package core;
 
+import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.options.BaseOptions;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+
 import java.net.*;
 public class Driver {
 
@@ -20,5 +24,17 @@ public class Driver {
 
     public static AppiumDriver getAppiumDriver() {
         return appiumDriver;
+    }
+
+    public static void swipe(int left, int right, String direction, double percent) {
+        Dimension dimension = Driver.getAppiumDriver().manage().window().getSize();
+        ((JavascriptExecutor) Driver.getAppiumDriver()).executeScript("mobile: scrollGesture", ImmutableMap.of(
+                "left" , left,
+                "top", right,
+                "width", dimension.getWidth()/2,
+                "height", dimension.getHeight()/2,
+                "direction", direction,
+                "percent" , percent
+        ));
     }
 }
